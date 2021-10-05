@@ -1,1 +1,32 @@
-<h1>This is the root for the app</h1>
+<div class="d-flex flex-column align-items-center justify-content-center mb-4">
+  <%= image_tag("undraw_Hang_out_re_udl4.svg", alt: "coffe", class:"chat__image")%>
+  <h1 class="mt-2 fs-3">Say something</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card me-2 shadow-sm card__wrapper fs-5">
+      <div class="card-body">
+        <p class="card-text">
+          <em>Fernando Viveros</em>: Test Message!
+        </p>
+      </div>
+      <div class="card-footer bg-white">
+        <div class="d-flex">
+          <input type="text" class="form-control me-2" placeholder="Text your message...">
+          <button type="submit" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 card shadow-sm card__wrapper">
+      <div class="card-body">
+        <div class="btn-group-vertical card__menu rounded">
+          <a href="#" class="btn card__menu-btn">Home</a>
+          <a href="#" class="btn card__menu-btn">Messages</a>
+          <a href="#" class="btn card__menu-btn">Friends</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

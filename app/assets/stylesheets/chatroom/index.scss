@@ -1,0 +1,38 @@
+.orange {
+  color: orange;
+}
+
+.chat__image {
+  width: 50%;
+}
+
+.card__wrapper{
+  height: 50vh;
+
+  .card-footer{
+    border: none;
+  }
+}
+
+.card__menu{
+  background-color: #2e2e2e;
+  width: 100%;
+
+  .card__menu-btn{
+    color: white;
+    border-bottom: 1px solid lighten($color: #2e2e2e, $amount: 10);
+    text-align: justify;
+
+    &:hover{
+      color: #ccc;
+      background-color: darken($color: #2e2e2e, $amount: 10);
+    }
+  }
+}
+
+
+@media screen and (min-width: 990px) {
+  .chat__image {
+    width: 20%;
+  }
+}

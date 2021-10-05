@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+    <%= link_to 'MessageApp!', root_path, class:"navbar-brand"%>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,7 +15,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home <i class="fas fa-camera"></i></a>
+          <%= link_to 'Home', root_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Messages</a>
@@ -29,15 +30,16 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Language
+          Account
         </a>
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li><a class="dropdown-item" href="#">English</a></li>
-          <li><a class="dropdown-item" href="#">Spanish</a></li>
+          <li><a class="dropdown-item" href="#">Log out</a></li>
+          <li><%= link_to 'Log In', login_path, class:"dropdown-item"%></li>
+          <li><a class="dropdown-item" href="#">Sign up</a></li>
         </ul>
       </div>
-      <a href="#" class="btn btn-primary mrt">Sign Up</a>
+      <%= link_to 'Log In', login_path, class:"btn btn-primary mrt"%>
     </div>
   </div>
 </nav>

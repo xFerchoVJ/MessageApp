@@ -1,0 +1,18 @@
+.login__wrapper{
+  margin-top: 100px;
+  height: 65vh;
+}
+
+.login__img{
+  width: 50%;
+}
+
+.login__signin-text{
+  margin: 0;
+  align-self: center;
+}
+@media screen and (max-width: 767px) {
+  .login__img{
+    width: 100%;
+  }
+}
