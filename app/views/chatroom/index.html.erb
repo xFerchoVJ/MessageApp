@@ -9,12 +9,12 @@
         <%= render 'messages/message' %>
       </div>
       <div class="card-footer bg-white">
-        <div class="d-flex">
-          <input type="text" class="form-control me-2" placeholder="Text your message...">
-          <button type="submit" class="btn btn-secondary">
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </div>
+        <%= form_for(@message, html: {role: "form"}, url: message_path) do |f|%>
+          <div class="d-flex">
+            <%= f.text_field :body, placeholder: "Text your message...", class:"form-control me-2", autocomplete: 'off'%>
+            <%= f.button '<i class="fas fa-paper-plane"></i>'.html_safe, class:"btn btn-secondary"%>
+          </div>
+        <% end %>
       </div>
     </div>
     <div class="col-md-3 card shadow-sm card__wrapper">
