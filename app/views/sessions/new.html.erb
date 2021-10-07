@@ -1,0 +1,25 @@
+<h1 class="text-center mt-5">Welcome to MessageApp!</h1>
+<div class="container login__wrapper"> 
+  <div class="d-md-flex justify-content-evenly align-items-center">
+    <%=image_tag("undraw_authentication_fsn5.svg", alt:"Auth", class:"login__img")%>
+    <div class="flex-grow-1 ms-4">
+      <%= form_for(:session, html:{role: "form"}, url: login_path) do |f|%>
+        <div class="form-group">
+          <%= f.label :username, "Username"%>
+          <%= f.text_field :username, placeholder: "Enter your username", class: "form-control"%>
+        </div>
+
+        <div class="form-group mt-3">
+          <%= f.label :password, "Password"%>
+          <%= f.password_field :password, placeholder: "Enter your password", class: "form-control"%>
+        </div>
+
+        <%= f.button "Login", class:"btn btn-primary mt-3"%>
+      <% end %>
+      <div class="d-md-flex text-start justify-content-start mt-md-2">
+        <p class="login__signin-text">Don't have an account yet?</p>
+        <a href="#" class="btn btn-secondary ms-3">Sign in</a>
+      </div>
+    </div>
+  </div>
+</div>

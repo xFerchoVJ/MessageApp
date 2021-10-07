@@ -1,4 +1,26 @@
 class SessionsController < ApplicationController
-  def login
+  def new
   end
+
+  def create
+    @user = User.find_by(username: params[:session][:username])
+    if @user && @user.authenticate(params[:session][:password])
+      #Good scenario
+      session[:user_id] = @user.id
+      flash[:success] = "You've successfully logged in"
+      redirect_to root_path
+    else
+      #user is invalid or auth failed
+      flash.now[:warning] = "There was somenthing wrong with your login information"
+      render 'new'
+    end
+  end
+
+  def destroy
+    session[:user_id] = nil
+    flash[:success] = "You've successfully logged out"
+    redirect_to login_path
+  end
+  
+  
 end

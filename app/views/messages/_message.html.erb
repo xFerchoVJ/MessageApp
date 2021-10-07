@@ -1,0 +1,8 @@
+<% @messages.each do |message| %>
+  <p class="card-text">
+    <em>
+      <%= message.user.username%>:
+    </em>
+    <%= message.body %>
+  </p>
+<% end %>
