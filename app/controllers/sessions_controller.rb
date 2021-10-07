@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       #user is invalid or auth failed
-      flash.now[:warning] = "There was somenthing wrong with your login information"
+      flash.now[:danger] = "There was somenthing wrong with your login information"
       render 'new'
     end
   end
