@@ -5,11 +5,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 card me-2 shadow-sm card__wrapper fs-5">
-      <div class="card-body">
-        <%= render 'messages/message' %>
+      <div class="messages">
+        <div class="card-body" id="message-container">
+          <%= render @messages %>
+        </div>
       </div>
       <div class="card-footer bg-white">
-        <%= form_for(@message, html: {role: "form"}, url: message_path) do |f|%>
+        <%= form_for(@message, html: {role: "form"}, url: message_path, remote: true) do |f|%>
           <div class="d-flex">
             <%= f.text_field :body, placeholder: "Text your message...", class:"form-control me-2", autocomplete: 'off'%>
             <%= f.button '<i class="fas fa-paper-plane"></i>'.html_safe, class:"btn btn-secondary"%>

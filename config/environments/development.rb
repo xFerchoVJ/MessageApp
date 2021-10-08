@@ -58,6 +58,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  config.action_cable.disable_request_forgery_protection = true
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
